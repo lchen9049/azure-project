@@ -25,8 +25,8 @@ resource "azurerm_app_service_plan" "app_service_plan" {
   resource_group_name = azurerm_resource_group.resource_group.name
 
   sku {
-    tier = "Standard"
-    size = "S1"
+    tier = "Free"
+    size = "F1"
   }
 }
 
