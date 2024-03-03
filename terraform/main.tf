@@ -16,7 +16,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "resource_group" {
   name     = "myTFResourceGroup"
-  location = "eastus2"
+  location = "westus3"
 }
 
 resource "azurerm_app_service_plan" "app_service_plan" {
