@@ -28,7 +28,7 @@ resource "azurerm_service_plan" "app_service_plan" {
 }
 
 resource "azurerm_app_service" "app_service" {
-  name                = "tfWebApp"
+  name                = "tfWebAppTest03032024"
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
   app_service_plan_id = azurerm_service_plan.app_service_plan.id
