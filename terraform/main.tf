@@ -23,11 +23,8 @@ resource "azurerm_service_plan" "app_service_plan" {
   name                = "tf-appserviceplan"
   location            = azurerm_resource_group.resource_group.location
   resource_group_name = azurerm_resource_group.resource_group.name
-
-  sku {
-    tier = "Free"
-    size = "F1"
-  }
+  os_type             = "Linux"
+  sku_name            = "F1"
 }
 
 resource "azurerm_app_service" "app_service" {
