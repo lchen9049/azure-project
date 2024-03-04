@@ -71,7 +71,7 @@ jobs:
         run: echo "::set-output name=version::$(grep -oP '(?<=version=")[^"]*' Dockerfile)"
 
       - name: Build the Docker image
-        run: docker build . -f ./Dockerfile --tag ${{env.IMAGE_NAME}}:${{env.VERSION }}
+        run: docker build . -f azure-project/Dockerfile --tag ${{env.IMAGE_NAME}}:${{env.VERSION }}
 
       - name: Push to GitHub Container Registry
         run: |
