@@ -6,7 +6,7 @@ RUN mvn clean package
 FROM openjdk:17
 COPY --from=builder /app/source/target/*.jar /app/app.jar
 EXPOSE 8000
-ENTRYPOINT ["java", "-cp", "/app/app.jar", "com.example.App"]
+ENTRYPOINT ["java", "-cp", "/app/app.jar", "com.project.app"]
 CMD [ "-i" ]
 
 LABEL maintainer="Test1" description="Test" version="1.0"
