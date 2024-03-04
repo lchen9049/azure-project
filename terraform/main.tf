@@ -6,6 +6,12 @@ terraform {
       version = "~> 3.3.0"
     }
   }
+#  backend "azurerm" {
+#    resource_group_name  = "tfstate"
+#   storage_account_name = "tfstate21567"
+#   container_name       = "tfstate"
+#   key                  = "terraform.tfstate"
+#  }
 
   required_version = ">= 1.1.0"
 }
@@ -15,8 +21,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "resource_group" {
-  name     = "myTFResourceGroup3"
-  location = "westus3"
+  name     = "myTFResourceGroup7"
+  location = "Canada Central"
 }
 
 resource "azurerm_service_plan" "app_service_plan" {
