@@ -21,7 +21,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "resource_group" {
-  name     = "myTFResourceGroup7"
+  name     = "myTFResourceGroup8"
   location = "Canada Central"
 }
 
