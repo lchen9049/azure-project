@@ -10,10 +10,6 @@ permissions:
   contents: write
   packages: write
 
-env:
-  IMAGE_NAME: ghcr.io/azure-project
-  VERSION: "1.0"
-
 jobs:
   terraform:
     name: "Terraform"
@@ -71,8 +67,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.IMAGE_NAME }}
-          labels: ${{ env.VERSION }}
+          tags: azure-project:1.0
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -80,4 +75,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: "ghcr.io/${{env.IMAGE_NAME}}:lastest"
+          images: "ghcr.io/azure-project:1.0"
