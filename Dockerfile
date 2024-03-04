@@ -6,6 +6,8 @@ RUN mvn clean package
 FROM openjdk:17
 COPY --from=builder /app/source/target/*.jar app.jar
 EXPOSE 8080
+EXPOSE 80
+EXPOSE 443
 ENTRYPOINT ["java","-jar","app.jar"]
 
 LABEL maintainer="Test1" description="Test" version="1.0"
