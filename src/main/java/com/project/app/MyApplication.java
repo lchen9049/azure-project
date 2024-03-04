@@ -11,6 +11,7 @@ public class MyApplication {
 
     @RequestMapping("/")
     String home() {
+        System.out.println("Hello World 1!");
         return "Hello World 1!";
     }
 
